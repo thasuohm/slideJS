@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TEST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sliderContainer">
+        <div class="item" id="item1" style="display: block">
+          <img src="./images/genshin1.jpg" alt="genshin1" class="Image" />
+        </div>
+        <div class="item" id="item2">
+          <img src="./images/genshin2.jpg" alt="genshin2" class="Image" />
+        </div>
+
+        <div class="item" id="item3">
+          <img src="./images/genshin3.png" alt="genshin3" class="Image" />
+        </div>
+
+        <div class="item" id="item4">
+          <img src="./images/genshin4.jpg" alt="genshin4" class="Image" />
+        </div>
+        <div class="item" id="item5">
+          <img src="./images/genshin5.jpg" alt="genshin5" class="Image" />
+        </div>
+
+        <div class="dotZone">
+          <span
+            class="dot currentClick"
+            id="dot1"
+            onclick="currentSlide(1)"
+          ></span>
+          <span class="dot" id="dot2" onclick="currentSlide(2)"></span>
+          <span class="dot" id="dot3" onclick="currentSlide(3)"></span>
+          <span class="dot" id="dot4" onclick="currentSlide(4)"></span>
+          <span class="dot" id="dot5" onclick="currentSlide(5)"></span>
+        </div>
+
+        <div class="prev button" onclick="move(-1)" id="prevButton">
+          <img src="images/arrow.svg" class="icon" id="icon" />
+        </div>
+        <div class="next button" onclick="move(1)" id="nextButton">
+          <img src="images/arrow.svg" class="icon" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
