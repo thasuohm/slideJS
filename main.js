@@ -1,6 +1,11 @@
 var current = 1;
 
 const move = (n) => {
+  if (current + n <= 5 && current + n >= 1) {
+    current += n;
+    cal();
+    return;
+  }
   if (current + n > 5) {
     current = 1;
     cal();
@@ -8,11 +13,6 @@ const move = (n) => {
   }
   if (current + n < 1) {
     current = 5;
-    cal();
-    return;
-  }
-  if (current + n <= 5 || current + n >= 1) {
-    current += n;
     cal();
     return;
   }
