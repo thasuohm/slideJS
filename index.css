@@ -10,17 +10,17 @@ body * {
 }
 
 .container {
-  width: 1000px;
   position: relative;
 }
 
 .sliderContainer {
-  width: 5000px;
+  width: 1000px;
   display: flex;
   flex-direction: row;
+  overflow-x: hidden;
 }
 .item {
-  display: none;
+  display: hidden;
 }
 
 .Image {
@@ -46,9 +46,10 @@ body * {
 .dotZone {
   position: absolute;
   bottom: -20px;
-  left: 450px;
+  text-align: center;
   display: flex;
-  justify-content: center;
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 .button {
@@ -80,4 +81,8 @@ body * {
 
 .icon {
   width: 16px;
+}
+
+.animate {
+  transition: 2s;
 }
