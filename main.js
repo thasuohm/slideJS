@@ -1,9 +1,10 @@
 const move = (n) => {
   var x = document.getElementById("item1");
-  y = x.style.marginLeft;
+  let y = x.style.marginLeft;
+  let domLength = document.querySelectorAll(".dot").length;
 
   if (n === 1) {
-    if (y === "-4000px") {
+    if (y === (domLength - 1) * -1000 + "px") {
       x.style.marginLeft = "0px";
     } else {
       x.style.marginLeft = y.slice(0, y.length - 2) - 1000 + "px";
@@ -11,7 +12,7 @@ const move = (n) => {
   }
   if (n === -1) {
     if (parseInt(y.slice(0, y.length - 2)) >= 0) {
-      x.style.marginLeft = "-4000px";
+      x.style.marginLeft = (domLength - 1) * -1000 + "px";
     } else {
       x.style.marginLeft =
         parseInt(1000 + parseInt(y.slice(0, y.length - 2))) + "px";
@@ -34,7 +35,7 @@ const move = (n) => {
     }
   }
 
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= domLength; i++) {
     if (i === cal + 1) {
       continue;
     } else {
@@ -48,8 +49,8 @@ const move = (n) => {
 const currentSlide = (n) => {
   var x = document.getElementById("item1");
   x.style.marginLeft = (n - 1) * -1000 + "px";
-
-  for (let i = 1; i <= 5; i++) {
+  let domLength = document.querySelectorAll(".dot").length;
+  for (let i = 1; i <= domLength; i++) {
     if (i === n) {
       continue;
     }
