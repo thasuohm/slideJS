@@ -53,3 +53,7 @@ const currentSlide = (n) => {
 
   document.getElementById("dot" + n).classList.add("currentClick");
 };
+
+setInterval(() => {
+  move(1);
+}, 3000);
