@@ -56,4 +56,4 @@ const currentSlide = (n) => {
 
 setInterval(() => {
   move(1);
-}, 3000);
+}, 10000);
